@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/nav.css" />
   <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/data-processing.css" />
  </head>
  <body>
      <header>
@@ -21,18 +22,51 @@
      </header>
      
    <main class="wrapper">
+       <div id="output">
     <form method="get" action="" class="main-form"> 
-        <div><label for="FirstName">First Name</label>: <br />
-            <input type="text" name="FirstName" id="FirstName" placeholder="First Name" required="required" autofocus />
+        <h3>Buy a widget</h3>
+        <div id="widgets">
+            <div>
+                <b>Widget</b><br />
+                <p>Our Widgets are spring loaded and need no batteries!</p>
+                <p>At $3.99 they're a bargain!</p>
+                <p><label><input type="checkbox" name="Cart" value="Widget" /> add to cart</label><br /></p>
+                <div class="pic"><img src="images/widget.png" /></div>
+            </div>
+            <div>
+                <b>Sprocket</b><br />
+                <p>Our Sprockets are well made and hold up to extreme pressure!</p>
+                <p>They only cost $5.99!</p>
+                <p><label><input type="checkbox" name="Cart" value="Sprocket" /> add to cart</label><br /></p>
+                <div class="pic"><img src="images/sprocket.png" /></div>
+            </div>
+            <div>
+                <b>Thingy</b><br />
+                <p>Our Thingys have many uses, and people love them!</p>
+                <p>Such a deal at $1.99!</p>
+                <p><label><input type="checkbox" name="Cart" value="Thingy" /> add to cart</label><br /></p>
+                <div class="pic"><img src="images/thingy.png" /></div>
+            </div>
         </div>
-        <div><label for="LastName">Last Name</label>: <br />
-            <input type="text" name="LastName" id="LastName" placeholder="Last Name" required="required" />
+        <div>
+            <label for="FirstName">First Name</label>: <br />
+            <input type="text" name="First_Name" id="FirstName" placeholder="First Name" required="required" autofocus />
         </div>
-        <div><label for="Email">Email</label>: <br />
+        <div>
+            <label for="LastName">Last Name</label>: <br />
+            <input type="text" name="Last_Name" id="LastName" placeholder="Last Name" required="required" />
+        </div>
+        <div>
+            <label for="Email">Email</label>: <br />
             <input type="email" name="Email" id="Email" placeholder="Email" required="required" />
         </div>
-         <div><label for="Address">Address</label>: <br />
+         <div>
+            <label for="Address">Address</label>: <br />
             <input type="text" name="Address" id="Address" placeholder="Address" required="required" />
+        </div>
+        <div>
+            <label for="City">City</label>: <br />
+            <input type="text" name="City" id="City" placeholder="City" required="required" />
         </div>
         <div>
             <label for="State">State</label>: <br />
@@ -45,31 +79,20 @@
             </select>
         </div>
         <div>
-            <fieldset>
-                <legend>Would you like to join our mailing list?</legend>
-                <label><input type="radio" name="Joinmailinglist" value="yes" required="required" /> Yes</label><br />
-                <label><input type="radio" name="Joinmailinglist" value="No" /> No</label>
-            </fieldset>
+            <label for="Postal code">Postal code</label>: <br />
+            <input type="text" name="Postal code" id="Postal code" placeholder="Postal code" required="required" />
         </div>
         <div>
-            <fieldset>
-                <legend>Interested in?</legend>
-                <label><input type="checkbox" name="Interestedin" value="Website" /> Website</label><br />
-                <label><input type="checkbox" name="Interestedin" value="OnlineCalender" /> Online Calender</label><br />
-                <label><input type="checkbox" name="Interestedin" value="ContactForm" /> Contact Form</label><br />
-                <label><input type="checkbox" name="Interestedin" value="Lollipops" /> Complimentary Lollipops</label>
-            </fieldset>
-        </div>
         <div>
-            <div><label for="Comments">Comments</label>: <br />
-            <textarea name="Comments" cols="36" rows="4"></textarea>
+            <div><label for="Notes">Notes</label>: <br />
+            <textarea name="Notes" cols="36" rows="4"></textarea>
         </div>
-       
+
         <div>
             <input type="submit" value="Submit it!" />
         </div>
     </form>
-     
+        </div>
      <footer>
       <p><small>&copy; 2021 by 
           Bill Le, All Rights Reserved ~ 
@@ -78,6 +101,7 @@
      </p>
     </footer>
    </main>
-  <script> src="js/main.js"</script>
+   <script src="js/data-processing.js"></script>
+  <script src="js/main.js"></script>
  </body>
 </html>
